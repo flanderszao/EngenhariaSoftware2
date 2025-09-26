@@ -6,6 +6,10 @@ spring:
         name: api-gateway
     cloud:
         gateway.server.webflux:
+            discovery:
+                locator:
+                  enabled: true
+                  lower-case-service-id: true
             routes:
                 - id: currency-conversion
                   uri: lb://currency-conversion
