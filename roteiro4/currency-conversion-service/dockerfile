@@ -21,6 +21,6 @@ WORKDIR /workspace/app
 #copiar os arquivos para execução no conteiner
 COPY --from=build /workspace/app/target/*.jar /workspace/app/app.jar
 #expor a porta utilizada na aplicação
-EXPOSE 8761
+EXPOSE 8100
 #executar o JAR
-ENTRYPOINT ["java", "-jar", "/workspace/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/workspace/app/app.jar"
